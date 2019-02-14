@@ -1,7 +1,8 @@
 # testpackages  
 
 ## javac command
-	###Example
+
+###Example	
 	javac -d /c/testpackages/classes src/com/shapes/*  
 
 javac <- compiler command  
@@ -26,7 +27,7 @@ javac -d classes -classpath /c/testpcakages/classes src/com/Driver.java
 	Driver needs these files/packages to be pre-compiled before it can compile, which is the reason the -	classpath flag is needed.  
 ## java command
 	
-	###Example
+###Example
 	java -classpath /c/testpackages/classes com.driver.Driver  
 
 java <- run java program command  
