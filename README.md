@@ -1,8 +1,9 @@
 # testpackages  
+##### - I am not an expert - document is for my own understanding of how compiling packages manually works.
 
 ## javac command
 
-###Example	
+### Compiling packages with no internal dependencies
 	javac -d /c/testpackages/classes src/com/shapes/*  
 
 javac <- compiler command  
@@ -14,20 +15,20 @@ javac <- compiler command
 
 src/com/shapes/* <- the path to the package of the files to be compiled - asterisk only compiles .java files within /shapes - if there is a subfolder like /shapes/quadrangles it would not compile those.  
   
+  ### Compiling classes with Main method (or other classes that have internal dependencies)
+	javac -d classes -classpath /c/testpcakages/classes src/com/Driver.java  
   
-javac -d classes -classpath /c/testpcakages/classes src/com/Driver.java  
-  
-	same as above - but -classpath flag is required with top-level classes/ directory  
-	packages need to be compiled in the order of their dependecies and will pull the information they need from the .class files  
+same as above - but -classpath flag is required with top-level classes/ directory  
+packages need to be compiled in the order of their dependecies and will pull the information they need from the .class files  
 		driver imports  
 			com.shapes.Circle;  
 			com.shapes.Square;  
 			com.words.Word;  
 
-	Driver needs these files/packages to be pre-compiled before it can compile, which is the reason the -	classpath flag is needed.  
+Driver needs these files/packages to be pre-compiled before it can compile,  
+which is the reason the -classpath flag is needed.  
+
 ## java command
-	
-###Example
 	java -classpath /c/testpackages/classes com.driver.Driver  
 
 java <- run java program command  
