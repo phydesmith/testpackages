@@ -1,7 +1,8 @@
 # testpackages  
 
 ## javac command
-javac -d /c/testpackages/classes src/com/shapes/*  
+	###Example
+	javac -d /c/testpackages/classes src/com/shapes/*  
 
 javac <- compiler command  
 -d <- flag used to mark destination of compiled class files  
@@ -24,7 +25,9 @@ javac -d classes -classpath /c/testpcakages/classes src/com/Driver.java
 
 	Driver needs these files/packages to be pre-compiled before it can compile, which is the reason the -	classpath flag is needed.  
 ## java command
-java -classpath /c/testpackages/classes com.abc.Driver  
+	
+	###Example
+	java -classpath /c/testpackages/classes com.driver.Driver  
 
 java <- run java program command  
 -classpath <- specifies that a specific class will be loaded contained within the following class path  
