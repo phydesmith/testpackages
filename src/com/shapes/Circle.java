@@ -1,4 +1,4 @@
-package com.yyy;
+package com.shapes;
 
 public class Circle{
 	private double radius;
